@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>待辦事項列表</title>
+</head>
+<body>
+<h1>我的待辦事項</h1>
+<input type="text" id="todoInput">
+<button id="addButton">新增</button>
+<ul id="todoList"></ul>
+
+<script type="text/javascript">
+    document.getElementById("addButton").addEventListener("click",OnBtnClick);
+
+    function OnBtnClick(){
+        var todo = document.getElementById("todoInput").value;
+        document.getElementById("todoInput").value = "";
+
+
+        var html = "<li>"+todo+"</li>";
+
+        document.getElementById("todoList").innerHTML +=html;
+
+    }
+</script>
+
+</body>
+</html>
